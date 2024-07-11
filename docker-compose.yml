@@ -3,7 +3,7 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: Dockerfiles/frontend.dockerfile
+      dockerfile: dockerfiles/frontend.dockerfile
       args:
         ENVIRONMENT: development # Change to 'production' for production builds
     container_name: ranizouaoui/task_frontend:latest
