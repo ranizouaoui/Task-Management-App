@@ -66,7 +66,7 @@ Make sure you have the following installed on your machine:
 ```bash
 npm run test
  ```
-## API Documentation
+## API Documentation (Swagger)
 
 API documentation is available via Swagger. After running the application, visit http://localhost:3000/api to view the Swagger documentation.
 
