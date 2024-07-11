@@ -1,4 +1,4 @@
-# # Task Management App - Frontend
+# Task Management App - Frontend
 
 This is a Task Management application built with Next.js. The application allows users to create, update, and manage tasks. It follows a modular structure with different components for forms, modals, UI elements, and layout.
 
