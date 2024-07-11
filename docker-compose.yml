@@ -7,6 +7,7 @@ services:
       args:
         ENVIRONMENT: development # Change to 'production' for production builds
     container_name: ranizouaoui/task_frontend:latest
+    image: ranizouaoui/task_frontend:latest
     ports:
       - "5000:5000"
     depends_on:
@@ -19,6 +20,7 @@ services:
       context: .
       dockerfile: dockerfiles/backend.dockerfile
     container_name: ranizouaoui/task_backend:latest
+    image: ranizouaoui/task_backend:latest
     ports:
       - '3000:3000'
     env_file:
