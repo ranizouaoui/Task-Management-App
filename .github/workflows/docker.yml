@@ -16,9 +16,9 @@ jobs:
         image: docker:19.03.12
         options: --privileged
         ports:
-          - 80:80
+          - 5000:5000
           - 3000:3000
-          - 27017:27017
+          - 5432:5432
         volumes:
           - /var/run/docker.sock:/var/run/docker.sock
 
