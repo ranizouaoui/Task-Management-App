@@ -47,7 +47,6 @@ jobs:
 
     - name: Build and run Docker Compose
       run: |
-        cd web
         docker-compose build
 
     - name: Tag and push frontend image
@@ -68,12 +67,12 @@ jobs:
     - name: Scan frontend image with Trivy
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: ranizouaoui/frontend:latest
+        image-ref: ranizouaoui/task_frontend:latest
 
     - name: Scan backend image with Trivy
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: ranizouaoui/backend:latest
+        image-ref: ranizouaoui/task_backend:latest
         
     - name: Run tests
       run: |
