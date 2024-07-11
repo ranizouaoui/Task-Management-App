@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li h2 {
+  margin: 0;
+}
+
+li p {
+  margin: 5px 0;
+}
+
+button, a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+button {
+  margin-right: 10px;
+}
+
+a {
+  margin-right: 10px;
+}
+
+.status-pending {
+  color: yellow;
+}
+
+.status-in_progress {
+  color: blue;
+}
+
+.status-done {
+  color: green;
+}
+
+.hidden {
+  display: none;
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(5px);
+}
+/* app/globals.css */
+/* app/globals.css */
+/* app/globals.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.table {
+  min-width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.table-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.bg-blue-700 {
+  background-color: #299be4;
+}
+.text-blue-700 {
+  color: #299be4;
+}
+
+
+.bg-green-500 {
+  background-color: #28a745;
+}
+
+.bg-red-500 {
+  background-color: #dc3545;
+}
+
+.bg-yellow-500 {
+  background-color: #ffc107;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.h-3 {
+  height: 0.75rem;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.space-x-2 > * {
+  margin-left: 0.5rem;
+}
+
+.space-x-4 > * {
+  margin-left: 1rem;
+}
+
+.space-y-4 > * {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .flex-col {
+    flex-direction: column;
+  }
+  .md\:mb-0 {
+    margin-bottom: 0 !important;
+  }
+  .space-y-4 > *:first-child {
+    margin-top: 0 !important;
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* app/globals.css */
+/* app/globals.css */

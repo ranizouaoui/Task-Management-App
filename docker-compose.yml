@@ -1,0 +1,42 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfiles/frontend.dockerfile
+      args:
+        ENVIRONMENT: development # Change to 'production' for production builds
+    container_name: ranizouaoui/task_frontend:latest
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3000
+
+  backend:
+    build:
+      context: .
+      dockerfile: dockerfiles/backend.dockerfile
+    container_name: ranizouaoui/task_backend:latest
+    ports:
+      - '3000:3000'
+    env_file:
+      - ./backend/.env.production
+    depends_on:
+      - postgres
+
+  postgres:
+    container_name: ranizouaoui/task_db:latest
+    image: postgres:13
+    environment:
+      POSTGRES_USER: taskmanager
+      POSTGRES_PASSWORD: taskmanager
+      POSTGRES_DB: taskmanager
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
