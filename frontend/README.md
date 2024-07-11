@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# # Task Management App - Frontend
 
-## Getting Started
+This is a Task Management application built with Next.js. The application allows users to create, update, and manage tasks. It follows a modular structure with different components for forms, modals, UI elements, and layout.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```plaintext
+app
+├── create
+│   └── page.tsx
+├── update
+│   └── [id]
+│       └── page.tsx
+├── page.tsx
+│
+components
+│
+├── forms
+│   └── TaskForm.tsx
+├── modals
+│   └── ConfirmModal.tsx
+├── ui
+│   ├── Button.tsx
+│   └── Pagination.tsx
+├── layout
+│   ├── Header.tsx
+│   └── Footer.tsx
+├── navigation
+│   └── NavBar.tsx
+services
+│   └── taskService.ts
+styles
+│   └── global.css
+│
+.env.development
+│
+.env.production
+├── 
+
 ```
+## Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have the following installed on your machine:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js (>=18.x)
+- Docker and Docker Compose (if running with Docker)
+- PostgreSQL (if running locally without Docker)
+- Backend running
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone https://github.com/ranizouaoui/Task-Management-App/
+    cd task-management-app/frontend
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install the dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+## Running the Application
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Using Docker (Recommended)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Ensure Docker and Docker Compose are installed.
+
+2. Start the Docker containers:
+
+    ```bash
+    docker-compose up --build
+    ```
+
+3. The application will be available at `http://localhost:3001`.
+
+### Running Locally
+
+1. Ensure PostgreSQL is running and create a database named `taskmanager`.
+2. Ensure backend is running.
+
+3. Start the NestJS application:
+
+    ```bash
+    npm run dev
+    ```
+
+## Directory Structure
+
+`app`
+- reate/page.tsx: The page for creating a new task.
+- update/[id]/page.tsx: The page for updating an existing task.
+- page.tsx: The main page of the application.
+
+`components`
+- forms/TaskForm.tsx: Form component for creating and updating tasks.
+- modals/ConfirmModal.tsx: Modal component for confirming actions.
+- ui/Button.tsx: Reusable button component.
+- ui/Pagination.tsx: Pagination component.
+- layout/Header.tsx: Header component.
+
+`services`
+- taskService.ts: Service for interacting with the backend API.
+
+`styles`
+- global.css: Global CSS styles for the application.
+
+## Environment Variables
+
+`NEXT_PUBLIC_API_BASE_URL:` The base URL for the API. Set this in .env.development and .env.production.
+
+
+### Example Environment Files
+
+`.env.development` : NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+`.env.production` : NEXT_PUBLIC_API_BASE_URL=http://backend:3000
