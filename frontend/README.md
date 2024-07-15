@@ -114,5 +114,5 @@ Make sure you have the following installed on your machine:
 
 ### Example Environment Files
 
-`.env.development` : NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
-`.env.production` : NEXT_PUBLIC_API_BASE_URL=http://backend:3000
+`.env.development` : NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
+`.env.production` : NEXT_PUBLIC_API_BASE_URL=http://backend:5000

@@ -38,3 +38,13 @@ This project is a Task Management Application, developed using NestJS for the ba
 - <a href="https://github.com/ranizouaoui/Task-Management-App/blob/main/frontend/README.md">Frontend Documentation</a>
 - <a href="https://github.com/ranizouaoui/Task-Management-App/tree/main/backend">Backend Documentation</a>
 - <a href="https://github.com/ranizouaoui/Task-Management-App/tree/main/backend">Postgres Documentation</a>
+
+## App preview
+
+![Update Page](./pictures/Update_Task.png)
+
+![Create Page](./pictures/Create_Task.png)
+
+![EXCEl Page](./pictures/Tasks_list.png)
+
+![Delete Page](./pictures/Confirm_Modal.png)

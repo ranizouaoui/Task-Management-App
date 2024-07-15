@@ -9,7 +9,7 @@ services:
     container_name: ranizouaoui/task_frontend:latest
     image: ranizouaoui/task_frontend:latest
     ports:
-      - "5000:5000"
+      - '3000:3000'
     depends_on:
       - backend
     environment:
@@ -22,7 +22,7 @@ services:
     container_name: ranizouaoui/task_backend:latest
     image: ranizouaoui/task_backend:latest
     ports:
-      - '3000:3000'
+      - "5000:5000"
     env_file:
       - ./backend/.env.production
     depends_on:

@@ -7,7 +7,7 @@ export interface Task {
   status: 'PENDING' | 'IN_PROGRESS' | 'DONE';
 }
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000';
 
 class TaskService {
   private static async handleResponse<T>(response: Promise<AxiosResponse<T>>): Promise<T> {

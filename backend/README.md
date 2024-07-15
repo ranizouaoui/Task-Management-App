@@ -38,7 +38,7 @@ Make sure you have the following installed on your machine:
     docker-compose up --build
     ```
 
-3. The application will be available at `http://localhost:3000`.
+3. The application will be available at `http://localhost:5000`.
 
 ### Running Locally
 
@@ -59,7 +59,7 @@ Make sure you have the following installed on your machine:
     npm run start:dev
     ```
 
-4. The application will be available at `http://localhost:3000`.
+4. The application will be available at `http://localhost:5000`.
 
 ## Running Tests
 

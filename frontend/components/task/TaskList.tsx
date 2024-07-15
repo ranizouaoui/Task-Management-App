@@ -11,7 +11,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, handleDelete }) => {
     <table className="min-w-full leading-normal">
       <thead>
         <tr>
-          <th className="px-5 py-3 bg-gray-100 border-b-2 border-gray-200 text-gray-600 text-left text-sm uppercase font-normal">#</th>
+          <th className="px-5 py-3 bg-gray-100 border-b-2 border-gray-200 text-gray-600 text-left text-sm uppercase font-normal">ID</th>
           <th className="px-5 py-3 bg-gray-100 border-b-2 border-gray-200 text-gray-600 text-left text-sm uppercase font-normal">Title</th>
           <th className="px-5 py-3 bg-gray-100 border-b-2 border-gray-200 text-gray-600 text-left text-sm uppercase font-normal">Description</th>
           <th className="px-5 py-3 bg-gray-100 border-b-2 border-gray-200 text-gray-600 text-left text-sm uppercase font-normal">Status</th>

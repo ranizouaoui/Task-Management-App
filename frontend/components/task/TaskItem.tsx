@@ -24,10 +24,10 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index, handleDelete }) => {
 
   return (
     <tr className="border-b border-gray-200 bg-white hover:bg-gray-50">
-      <td className="px-5 py-5 text-sm">{index + 1}</td>
-      <td className="px-5 py-5 text-sm">{task.title}</td>
-      <td className="px-5 py-5 text-sm">{task.description}</td>
-      <td className="px-5 py-5 text-sm flex items-center">
+      <td className="px-5 py-5 text-sm text-gray-700">{index + 1}</td>
+      <td className="px-5 py-5 text-sm text-gray-700">{task.title}</td>
+      <td className="px-5 py-5 text-sm text-gray-700">{task.description}</td>
+      <td className="px-5 py-5 text-sm flex items-center text-gray-700">
         <span className={`h-3 w-3 rounded-full mr-2 ${getStatusColorClass(task.status)}`}></span>
         {task.status}
       </td>

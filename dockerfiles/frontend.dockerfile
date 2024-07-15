@@ -43,12 +43,12 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 USER nextjs
 
 # Exposed port (for orchestrators and dynamic reverse proxies)
-EXPOSE 5000
-ENV PORT 5000
+EXPOSE 3000
+ENV PORT 3000
 ENV HOSTNAME "0.0.0.0"
 
 # Healthcheck
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD wget -qO- http://localhost:5000/ || exit 1
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD wget -qO- http://localhost:3000/ || exit 1
 
 # Run the nextjs app
 CMD ["node", "server.js"]
