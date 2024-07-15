@@ -12,4 +12,7 @@ jobs:
   test:
     uses: ./.github/workflows/test.yml
     secrets: inherit  
+  build:
+    uses: ./.github/workflows/docker.yml
+    secrets: inherit
   
