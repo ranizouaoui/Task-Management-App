@@ -1,0 +1,42 @@
+name: Run Tests
+
+on:
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:13
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: taskmanager
+          POSTGRES_PASSWORD: taskmanager
+          POSTGRES_DB: taskmanager
+        options: >-
+          --health-cmd "pg_isready -U taskmanager"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+
+    - name: Install dependencies for backend
+      run: |
+        cd backend
+        npm install
+
+    - name: Run tests for backend
+      run: |
+        cd backend
+        npm test
