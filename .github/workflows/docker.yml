@@ -5,12 +5,12 @@ on:
     workflows: ["Run Tests"]
     types:
       - completed
-      
-  workflow_call:
-    inputs:
-      DOCKER_IMAGE_NAME:
-        required: false
-        type: string
+
+  # workflow_call:
+  #   inputs:
+  #     DOCKER_IMAGE_NAME:
+  #       required: false
+  #       type: string
 
 jobs:
   build:

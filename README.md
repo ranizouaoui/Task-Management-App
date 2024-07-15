@@ -31,7 +31,7 @@ This project is a Task Management Application, developed using NestJS for the ba
 3. **Build the Docker images and start the containers::**
 
 - **Frontend:** Open your browser and go to http://localhost:5000
-- **Backend:** The Spring Boot API will be running at http://localhost:3000
+- **Backend:** The Nest.Js API will be running at http://localhost:3000
 
 ## Documentation
 
