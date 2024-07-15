@@ -1,10 +1,7 @@
 name: Docker Compose Build
 
 on:
-  workflow_run:
-    workflows: ["Run Tests"]
-    types:
-      - completed
+  workflow_dispatch:
 
   # workflow_call:
   #   inputs:
