@@ -1,6 +1,11 @@
 name: Docker Compose Build
 
 on:
+  workflow_run:
+    workflows: ["Run Tests"]
+    types:
+      - completed
+      
   workflow_call:
     inputs:
       DOCKER_IMAGE_NAME:
