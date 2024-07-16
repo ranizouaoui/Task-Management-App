@@ -6,10 +6,12 @@ import TaskList from '../components/task/TaskList';
 import ConfirmModal from '../components/modals/ConfirmModal';
 import Pagination from '../components/ui/Pagination';
 import Header from '@/components/layout/Header';
+import LoadingDots from '@/components/ui/LoadingDots';
 import { utils, writeFile } from 'xlsx';
 
 const Home = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [taskToDelete, setTaskToDelete] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,8 +22,10 @@ const Home = () => {
       try {
         const tasksData = await TaskService.getTasks();
         setTasks(tasksData);
+        setLoading(false);
       } catch (error) {
         console.error('Failed to fetch tasks:', error);
+        setLoading(false);
       }
     };
     fetchTasks();
@@ -68,17 +72,23 @@ const Home = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <Header onExport={exportToExcel} />
-      <div className="bg-white shadow rounded-lg overflow-hidden mt-4">
-        <TaskList tasks={currentTasks} handleDelete={handleDelete} />
-        {tasks.length > tasksPerPage && (
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
-          />
-        )}
-      </div>
+      {!loading && <Header onExport={exportToExcel} />}
+      {loading ? (
+        <div className="flex justify-center items-center min-h-screen">
+          <LoadingDots />
+        </div>
+      ) : (
+        <div className="bg-white shadow rounded-lg overflow-hidden mt-4">
+          <TaskList tasks={currentTasks} handleDelete={handleDelete} />
+          {tasks.length > tasksPerPage && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={handlePageChange}
+            />
+          )}
+        </div>
+      )}
       <ConfirmModal show={showModal} onClose={closeModal} onConfirm={confirmDelete} />
     </div>
   );

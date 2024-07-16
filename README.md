@@ -30,8 +30,8 @@ This project is a Task Management Application, developed using NestJS for the ba
 
 3. **Build the Docker images and start the containers::**
 
-- **Frontend:** Open your browser and go to http://localhost:5000
-- **Backend:** The Nest.Js API will be running at http://localhost:3000
+- **Frontend:** Open your browser and go to http://localhost:3000
+- **Backend:** The Nest.Js API will be running at http://localhost:5000
 
 ## Documentation
 
@@ -45,6 +45,6 @@ This project is a Task Management Application, developed using NestJS for the ba
 
 ![Create Page](./pictures/Create_Task.png)
 
-![EXCEl Page](./pictures/Tasks_list.png)
+![EXCEl Page](./pictures/Tasks_List.png)
 
 ![Delete Page](./pictures/Confirm_Modal.png)
