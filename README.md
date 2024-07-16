@@ -45,6 +45,6 @@ This project is a Task Management Application, developed using NestJS for the ba
 
 ![Create Page](./pictures/Create_Task.png)
 
-![EXCEl Page](./pictures/Tasks_List.png)
-
 ![Delete Page](./pictures/Confirm_Modal.png)
+
+![EXCEl Page](./pictures/Tasks_List.png)
