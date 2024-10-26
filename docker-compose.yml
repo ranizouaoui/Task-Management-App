@@ -29,7 +29,7 @@ services:
       - postgres
 
   postgres:
-    container_name: ranizouaoui/task_db:latest
+    container_name: ranizouaoui/postgres:latest
     image: postgres:13
     environment:
       POSTGRES_USER: taskmanager
